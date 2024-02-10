@@ -1,27 +1,36 @@
-<h1>Git Tutorial </h1>
-<h3>SETUP</h3> 
-<p>
-<h4>Configuring user information used across all local repositories</h4>
-<b>git config --global user.name “[firstname lastname]”</b>
-set a name that is identifiable for credit when review version history
-<b>git config --global user.email “[valid-email]”</b>
-set an email address that will be associated with each history marker
-<b>git config --global color.ui auto</b>
-set automatic command line coloring for Git for easy reviewing
-</p>
-<br>
-<h3>SETUP & INIT</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Tutorial</title>
+</head>
+<body>
+
+<h1>Git Tutorial</h1>
+
+<h2>SETUP</h2>
+
+<h3>Configuring user information used across all local repositories</h3>
+<ul>
+    <li><b>git config --global user.name</b> "[firstname lastname]"<br>
+        Set a name that is identifiable for credit when reviewing version history.</li>
+    <li><b>git config --global user.email</b> "[valid-email]"<br>
+        Set an email address that will be associated with each history marker.</li>
+    <li><b>git config --global color.ui</b> auto<br>
+        Set automatic command line coloring for Git for easy reviewing.</li>
+</ul>
+
+<h2>SETUP & INIT</h2>
+
+<h3>Configuring user information, initializing, and cloning repositories</h3>
 <p>    
-    <h4> Configuring user information, initializing and cloning repositories</h4>
-   
-    git init
-    initialize an existing directory as a Git repository
-    You have to clone the repository to make it accessible and make changes on it 
-    step 1: Clone the repository
-    <b>git clone https://github.com/sejal3008/GitTutorial.git </b> #copy git code to our folder
-    git clone [url]
-    retrieve an entire repository from a hosted location via URL
-    <br>
+    <b>git init</b><br>
+    Initialize an existing directory as a Git repository.<br>
+    Note: You have to clone the repository to make it accessible and make changes to it.<br>
+    <b>Step 1: Clone the repository</b><br>
+    <b>git clone</b> [url]<br>
+    Retrieve an entire repository from a hosted location via URL<br>
     <ol>
         <li>Make changes to your files</li>
         <li>To Add changes on staging area</li>
@@ -29,21 +38,134 @@ set automatic command line coloring for Git for easy reviewing
         <li>Push your code to Github</li>
     </ol>
 </p>
-<br>
-<h3>STAGE & SNAPSHOT</h3>
+
+<h3>Git Init Commands </h3>
 <p>
-    Working with snapshots and the Git staging area
-    <b>git status</b>
-    show modified files in working directory, staged for your next commit
-    <b>git add [file]</b>
-    add a file as it looks now to your next commit (stage)
-    <b>git reset [file]</b>
-    unstage a file while retaining the changes in working directory
-    <b>git diff</b>
-    diff of what is changed but not staged
-    <b>git diff --staged</b>
-    diff of what is staged but not yet commited
-    <b>git commit -m “[descriptive message]”</b>
-    commit your staged content as a new commit snapshot
+    <p>The <code>git init</code> command is used to initialize a new Git repository in the current directory or an existing directory. Here's a list of common <code>git init</code> commands and their descriptions:</p>
+
+<ul>
+    <li>
+        <strong>Initialize a new Git repository:</strong><br>
+        <pre><code>git init</code></pre>
+        This command initializes a new Git repository in the current directory, creating a new <code>.git</code> subdirectory that contains all of the necessary repository files.
+    </li>
+    
+    <li>
+        <strong>Initialize a new Git repository with a specific directory name:</strong><br>
+        <pre><code>git init &lt;directory&gt;</code></pre>
+        This command initializes a new Git repository in the specified directory.
+    </li>
+    
+    <li>
+        <strong>Initialize a bare Git repository:</strong><br>
+        <pre><code>git init --bare</code></pre>
+        This command initializes a new bare Git repository, which is typically used as a centralized repository where developers can push their changes.
+    </li>
+    
+    <li>
+        <strong>Initialize a new Git repository with an initial commit:</strong><br>
+        <pre><code>git init &amp;&amp; git commit -m "Initial commit"</code></pre>
+        This command initializes a new Git repository and makes an initial commit with the message "Initial commit".
+    </li>
+    
+    <li>
+        <strong>Initialize a new Git repository with a specified initial commit message:</strong><br>
+        <pre><code>git init &amp;&amp; git commit -m "Your initial commit message"</code></pre>
+        This command initializes a new Git repository and makes an initial commit with the specified message.
+    </li>
+    
+    <li>
+        <strong>Initialize a Git repository in a subdirectory:</strong><br>
+        <pre><code>cd &lt;subdirectory&gt; <br> git init</code></pre>
+        Navigate to the desired subdirectory and then initialize a new Git repository within it.
+    </li>
+</ul>
+
 </p>
 
+<h2>STAGE & SNAPSHOT</h2>
+
+<h3>Working with snapshots and the Git staging area</h3>
+<ul>
+    <li><b>git status</b><br>
+        Show modified files in working directory, staged for your next commit</li>
+    <li><b>git add</b> [file]<br>
+        Add a file as it looks now to your next commit (stage)</li>
+    <li><b>git reset</b> [file]<br>
+        Unstage a file while retaining the changes in working directory</li>
+    <li><b>git diff</b><br>
+        Diff of what is changed but not staged</li>
+    <li><b>git diff --staged</b><br>
+        Diff of what is staged but not yet committed</li>
+    <li><b>git commit -m</b> "[descriptive message]"<br>
+        Commit your staged content as a new commit snapshot</li>
+</ul>
+
+<h3>Generating a SSH Key</h3>
+<p>After performing all changes, you need to push all code On the Github. To do that, you need to generate an SSH key.
+
+<ol>
+<li>If you already have an SSH key:
+    <ol type="a">
+    <li>Go to Github repository -> Your Profile -> Settings -> SSH and GPG key -> add new SSH keys.</li>
+    <li>Give any name to it and click on Add SSH key.</li>
+    </ol>
+</li>
+<li>If you don't have an SSH key:
+    <ol type="a">
+    <li>SSH and GPG key.</li>
+    <li>Click on "connecting to Github using SSH key".</li>
+    <li>Generate a new SSH key, copy the URL <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code>.</li>
+    <li>Open the git bash, select any folder location, paste the URL with your email address, which is connecting to GitHub.</li>
+    <li>It asks for the location, set it as default, just enter.</li>
+    <li>It asks for a passphrase, set it as default, just enter.</li>
+    <li>Now go to the path where your SSH key is generated.</li>
+    <li>Open your id_rsa.pub (name should be different) in notepad and copy the SSH key.</li>
+    <li>Now come back to Github -> SSH and GPG key -> add new SSH key, paste the URL in the description.</li>
+    <li>Click on Add SSH key.</li>
+    </ol>
+</li>
+<li>Now Go to the repository -> local -> ssh -> copy the URL and add.</li>
+<li>Before push, you have to set the remote repo:
+    <ul>
+    <li>Run the following command: <code>git remote add origin [url]</code> (paste the URL here).</li>
+    <li>Now you can easily push the changes on GitHub by running: <code>git push origin main</code> (this will push changes from local to your Git repository).</li>
+    </ul>
+</li>
+</ol>
+</p>
+
+<h3>SHARE & UPDATE</h3>
+<p>Retrieving updates from another repository and updating local repos:
+<ul>
+    <li><b>git remote add [alias] [url]</b><br>
+        Add a git URL as an alias</li>
+    <li><b>git fetch [alias]</b><br>
+        Fetch down all the branches from that Git remote</li>
+    <li><b>git merge [alias]/[branch]</b><br>
+        Merge a remote branch into your current branch to bring it up to date</li>
+    <li><b>git push [alias] [branch]</b><br>
+        Transmit local branch commits to the remote repository branch</li>
+    <li><b>git pull</b><br>
+        Fetch and merge any commits from the tracking remote branch</li>
+</ul>
+</p>
+
+<h3>INSPECT & COMPARE</h3>
+<p>Examining logs, diffs, and object information:
+<ul>
+    <li><b>git log</b><br>
+        Show the commit history for the currently active branch</li>
+    <li><b>git log branchB..branchA</b><br>
+        Show the commits on branchA that are not on branchB</li>
+    <li><b>git log --follow [file]</b><br>
+        Show the commits that changed file, even across renames</li>
+    <li><b>git diff branchB...branchA</b><br>
+        Show the diff of what is in branchA that is not in branchB</li>
+    <li><b>git show [SHA]</b><br>
+        Show any object in Git in human-readable format</li>
+</ul>
+</p>
+
+</body>
+</html>
