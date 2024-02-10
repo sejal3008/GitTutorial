@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands and Usage</title>
+</head>
+<body>
+
+<h1>Git Commands and Usage</h1>
+
+<h2>SHARE & UPDATE</h2>
+<p>Retrieving updates from another repository and updating local repos:</p>
+<ul>
+    <li><b>git remote add [alias] [url]</b><br>
+        Add a git URL as an alias.</li>
+    <li><b>git fetch [alias]</b><br>
+        Fetch down all the branches from that Git remote.</li>
+    <li><b>git merge [alias]/[branch]</b><br>
+        Merge a remote branch into your current branch to bring it up to date.</li>
+    <li><b>git push [alias] [branch]</b><br>
+        Transmit local branch commits to the remote repository branch.</li>
+    <li><b>git pull</b><br>
+        Fetch and merge any commits from the tracking remote branch.</li>
+</ul>
+
+<h2>TRACKING PATH CHANGES</h2>
+<p>Versioning file removes and path changes:</p>
+<ul>
+    <li><b>git rm [file]</b><br>
+        Delete the file from the project and stage the removal for commit.</li>
+    <li><b>git mv [existing-path] [new-path]</b><br>
+        Change an existing file path and stage the move.</li>
+    <li><b>git log --stat -M</b><br>
+        Show all commit logs with indication of any paths that moved.</li>
+</ul>
+
+<h2>REWRITE HISTORY</h2>
+<p>Rewriting branches, updating commits and clearing history:</p>
+<ul>
+    <li><b>git rebase [branch]</b><br>
+        Apply any commits of current branch ahead of specified one.</li>
+    <li><b>git reset --hard [commit]</b><br>
+        Clear staging area, rewrite working tree from specified commit.</li>
+</ul>
+
+<h2>IGNORING PATTERNS</h2>
+<p>Preventing unintentional staging or committing of files:</p>
+<p>Save a file with desired patterns as .gitignore with either direct string matches or wildcard globs.</p>
+<ul>
+    <li><b>logs/</b></li>
+    <li><b>*.notes</b></li>
+    <li><b>pattern*/</b></li>
+</ul>
+<p><b>git config --global core.excludesfile [file]</b><br>
+System-wide ignore pattern for all local repositories.</p>
+
+<h2>TEMPORARY COMMITS</h2>
+<p>Temporarily store modified, tracked files in order to change branches:</p>
+<ul>
+    <li><b>git stash</b><br>
+        Save modified and staged changes.</li>
+    <li><b>git stash list</b><br>
+        List stack-order of stashed file changes.</li>
+    <li><b>git stash pop</b><br>
+        Write working from top of stash stack.</li>
+    <li><b>git stash drop</b><br>
+        Discard the changes from top of stash stack.</li>
+</ul>
+
+</body>
+</html>
