@@ -1,0 +1,49 @@
+<h1>Git Tutorial </h1>
+<h3>SETUP</h3> 
+<p>
+<h4>Configuring user information used across all local repositories</h4>
+<b>git config --global user.name “[firstname lastname]”</b>
+set a name that is identifiable for credit when review version history
+<b>git config --global user.email “[valid-email]”</b>
+set an email address that will be associated with each history marker
+<b>git config --global color.ui auto</b>
+set automatic command line coloring for Git for easy reviewing
+</p>
+<br>
+<h3>SETUP & INIT</h3>
+<p>    
+    <h4> Configuring user information, initializing and cloning repositories</h4>
+   
+    git init
+    initialize an existing directory as a Git repository
+    You have to clone the repository to make it accessible and make changes on it 
+    step 1: Clone the repository
+    <b>git clone https://github.com/sejal3008/GitTutorial.git </b> #copy git code to our folder
+    git clone [url]
+    retrieve an entire repository from a hosted location via URL
+    <br>
+    <ol>
+        <li>Make changes to your files</li>
+        <li>To Add changes on staging area</li>
+        <li>Commit changes on the staging area</li>
+        <li>Push your code to Github</li>
+    </ol>
+</p>
+<br>
+<h3>STAGE & SNAPSHOT</h3>
+<p>
+    Working with snapshots and the Git staging area
+    <b>git status</b>
+    show modified files in working directory, staged for your next commit
+    <b>git add [file]</b>
+    add a file as it looks now to your next commit (stage)
+    <b>git reset [file]</b>
+    unstage a file while retaining the changes in working directory
+    <b>git diff</b>
+    diff of what is changed but not staged
+    <b>git diff --staged</b>
+    diff of what is staged but not yet commited
+    <b>git commit -m “[descriptive message]”</b>
+    commit your staged content as a new commit snapshot
+</p>
+
