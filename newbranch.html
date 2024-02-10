@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Branching </title>
+</head>
+<body>
+
+<h1>Git Branching</h1>
+
+<h2>Create a New Branch</h2>
+<p>When working on a Git repository, branching allows you to create a separate line of development, isolating your changes from the main codebase. To create a new branch:</p>
+<pre><code>git branch &lt;branch_name&gt;</code></pre>
+<p>This command creates a new branch with the specified name but does not switch to it.</p>
+
+<h2>Navigate Between Branches</h2>
+<p>Once you have multiple branches, you can switch between them using:</p>
+<pre><code>git checkout &lt;branch_name&gt;</code></pre>
+<p>This command switches to the specified branch.</p>
+
+<h2>Merge Branches</h2>
+<p>After making changes in a feature branch, you may want to incorporate those changes into the main branch. To merge branches:</p>
+<pre><code>git checkout main</code><br><code>git merge &lt;feature_branch&gt;</code></pre>
+<p>This switches to the main branch and then merges the changes from the specified feature branch into it.</p>
+
+<h2>Command Details</h2>
+
+<h3><code>git branch &lt;branch_name&gt;</code></h3>
+<p>This command creates a new branch with the given name.</p>
+
+<h3><code>git checkout &lt;branch_name&gt;</code></h3>
+<p>This command switches to the specified branch.</p>
+
+<h3><code>git merge &lt;feature_branch&gt;</code></h3>
+<p>This command merges changes from the specified feature branch into the current branch.</p>
+
+<h3>Example Workflow:</h3>
+<ol>
+    <li>Create a new branch: <code>git branch feature1</code></li>
+    <li>Switch to the new branch: <code>git checkout feature1</code></li>
+    <li>Make changes and commit them.</li>
+    <li>Switch back to the main branch: <code>git checkout main</code></li>
+    <li>Merge changes from feature branch: <code>git merge feature1</code></li>
+</ol>
+
+<p>By following these steps, you can effectively manage your Git branches and collaborate on projects with ease.</p>
+
+</body>
+</html>
